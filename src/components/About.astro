@@ -1,0 +1,54 @@
+---
+import Card from "./Card.astro";
+import Github from "../../github-sign.png";
+import Insta from "../../instagram.png";
+import LinkedIn from "../../linkedin.png";
+import Behance from "../../behance.png";
+import Person from "../../person-2.png";
+---
+
+<section
+  class="bg-cream-400 relative min-h-[100vh] w-full flex flex-col items-center justify-center"
+>
+  <div class="grid grid-cols-12 w-3/4 mt-10 md:mt-0">
+    <!-- First section with 5 columns -->
+    <div class="col-span-12 md:col-span-6 justify-center hidden md:flex">
+      <!-- Content of the first section -->
+      <img src={Person} class="w-4/5 h-auto" />
+    </div>
+
+    <!-- Second section with 7 columns -->
+    <div class="col-span-12 md:col-span-5">
+      <!-- Content of the second section -->
+      <div class="h-full flex flex-col justify-center">
+        <h3 class="italic text-pink-600 mb-4">About Me ......</h3>
+        <h1 class="font-extrabold text-4xl mb-4">
+          Hi, I am here to <span class="text-yellow-400">help you</span>
+        </h1>
+        <p class="text-gray-600 font-light leading-6 mb-4">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt,
+          facilis voluptas? Corporis repellat voluptatibus nemo temporibus nulla
+          et atque, officiis animi laudantium corrupti facilis culpa!
+        </p>
+        <div>
+          <button
+            class="py-4 px-8 text-black bg-cream-400 shadow-sm bg-gradient-to-r from-yellow-400 to-transparent"
+            >Hire me</button
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="w-full flex justify-around relative md:absolute md:-bottom-8 flex-wrap my-10 md:my-0 gap-2 md:gap-0"
+  >
+    <Card
+      title={"Github"}
+      link={"https://loremipusm.comsdsadsda"}
+      icon={Github}
+    />
+    <Card title={"Instagram"} link={"asdasd"} icon={Insta} />
+    <Card title={"Behance"} link={"asdasd"} icon={Behance} />
+    <Card title={"Linkedin"} link={"asdasd"} icon={LinkedIn} />
+  </div>
+</section>

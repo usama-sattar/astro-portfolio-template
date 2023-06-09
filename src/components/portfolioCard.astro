@@ -1,0 +1,38 @@
+---
+import TechChip from "./TechChip.astro";
+export interface Props {
+  title: string;
+  description?: String;
+  link: String;
+  technologies: string[];
+}
+const { description, title, link } = Astro.props as Props;
+const technologies = [
+  { title: "React", color: "#fb8500" },
+  { title: "Node", color: "#ffb703" },
+  { title: "Express", color: "#219ebc" },
+  { title: "Python", color: "#3a86ff" },
+  { title: "AWS", color: "#dda15e" },
+];
+---
+
+<div class="bg-cream-400 rounded-md shadow-md">
+  <div class="flex items-center">
+    <div class="p-4">
+      <h3 class="font-bold mb-2">{title}</h3>
+      <h4 class="text-gray-600 leading-6">
+        {
+          description ??
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos facilis consectetur omnis. Quibusdam inventore eligendi placeat rem perspiciatis voluptas necessitatibus exercitationem, repudiandae modi quaerat."
+        }
+      </h4>
+      <div class="flex gap-2 mt-2 flex-wrap">
+        {
+          technologies.map((tech) => (
+            <TechChip color={tech.color} title={tech.title} />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</div>

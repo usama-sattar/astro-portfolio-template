@@ -1,0 +1,36 @@
+---
+import PortfolioCard from "./portfolioCard.astro";
+---
+
+<section class="min-h-[100vh] w-full bg-purple-200 grid grid-cols-12">
+  <div class="col-span-12 md:col-span-2">
+    <div
+      class="h-full bg-purple-400 w-full flex justify-center items-center md:rounded-tr-3xl md:rounded-br-3xl"
+    >
+      <h1
+        class="font-extrabold text-yellow-400 md:tracking-widest md:transform md:-rotate-90 text-4xl md:text-6xl py-4 md:py-0"
+      >
+        Portfolio
+      </h1>
+    </div>
+  </div>
+
+  <div
+    class="col-span-12 md:col-span-10 my-16 p-10 flex flex-col justify-center"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <PortfolioCard
+        title="Location Tracker"
+        link={"#"}
+        technologies={["sda"]}
+      />
+      <PortfolioCard title="Nearby Places" link={"#"} technologies={["sda"]} />
+      <PortfolioCard title="Point of sale" link={"#"} technologies={["sda"]} />
+      <PortfolioCard
+        title="Github project reader"
+        link={"#"}
+        technologies={["sda"]}
+      />
+    </div>
+  </div>
+</section>

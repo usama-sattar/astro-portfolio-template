@@ -1,0 +1,32 @@
+<header class="absolute top-0 left-0 w-full min-h-[16px] z-20">
+  <nav class="flex h-full items-center justify-center">
+    <div
+      class="w-full md:w-3/4 flex flex-col md:flex-row justify-between items-center text-cream-400 py-3"
+    >
+      <span class="hoverable cursor-pointer"
+        >&lt; John <span class="hidden">Doe</span> &#47;&gt;</span
+      >
+
+      <ul class="flex justify-end sm:space-x-3 md:space-x-6 text-cream-400">
+        <li class="p-3"><a href="#" class="hover:text-purple-100">Home</a></li>
+        <li class="p-3"><a href="#" class="hover:text-purple-100">About</a></li>
+        <li class="p-3">
+          <a href="#" class="hover:text-purple-100">Portfolio</a>
+        </li>
+        <li class="p-3">
+          <a
+            href="#"
+            class="hover:text-purple-100 box-border px-2 py-1 bg-[#ffffff4d] rounded-sm"
+            >Hire me</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .hoverable:hover > .hidden {
+    display: inline;
+  }
+</style>

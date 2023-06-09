@@ -1,0 +1,22 @@
+---
+export interface Props {
+  icon: any;
+  title: String;
+  link: String;
+}
+const { icon, title, link } = Astro.props as Props;
+---
+
+<div class="w-52 p-3 bg-white rounded-md shadow-md">
+  <div class="flex items-center">
+    <div class="mr-3">
+      <img src={icon} class="w-12" />
+    </div>
+    <div>
+      <h3 class="font-bold">{title}</h3>
+      <a class="text-sm text-gray-500 cursor-pointer hover:text-gray-600">
+        {"Go now"}
+      </a>
+    </div>
+  </div>
+</div>
